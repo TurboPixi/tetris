@@ -185,6 +185,26 @@ export class App {
         }
       },
     });
+    this.controls.gesture.putSwipeMappings({
+      'swipedown': () => {
+        if (this.state.interactive) {
+          this.moveFigureBottom();
+        }
+        if (this.tickerId) {
+          this.stopBottomTicker();
+        }
+      },
+      'swipeleft': () => {
+        if (this.state.interactive) {
+          this.state.figure.activeFigure.moveLeft();
+        }
+      },
+      'swiperight': () => {
+        if (this.state.interactive) {
+          this.state.figure.activeFigure.moveRight();
+        }
+      },
+    });
     this.controls.keyboard.putKeyUpMappings({
       Escape: () => {
         this.togglePause();

@@ -21,6 +21,7 @@ import { LevelUI } from "../UI/Level";
 import { LinesUI } from "../UI/Lines";
 import { UI } from "../UI";
 import { HomeMenu } from "../UI/HomeMenu";
+import {Gesture} from "../controls/Gesture";
 
 const container = new Container();
 container.bind(TYPES.Renderer).toConstantValue(new Renderer(RENDERER_CONFIG));
@@ -36,6 +37,7 @@ container.bind(TYPES.UI).to(UI).inSingletonScope();
 
 container.bind(TYPES.Stage).toConstantValue(new Stage());
 container.bind(TYPES.Keyboard).to(Keyboard);
+container.bind(TYPES.Gesture).to(Gesture);
 container.bind(TYPES.GameControls).to(GameControls).inSingletonScope();
 container.bind(TYPES.ScoreState).to(ScoreState).inSingletonScope();
 container.bind(TYPES.GridState).to(GridState).inSingletonScope();

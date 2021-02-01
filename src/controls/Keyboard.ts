@@ -1,5 +1,4 @@
 import { injectable } from "inversify";
-
 type Mapping = { [key: string]: Function };
 @injectable()
 export class Keyboard {

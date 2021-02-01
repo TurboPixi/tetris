@@ -1,5 +1,6 @@
 export const TYPES = {
   Keyboard: Symbol.for("Keyboard"),
+  Gesture: Symbol.for("Gesture"),
   GameControls: Symbol.for("GameControls"),
 
   GameState: Symbol.for("GameState"),

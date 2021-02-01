@@ -12,6 +12,10 @@
     "types": ["jest"],
     "typeRoots": ["node_modules/@types"]
   },
-  "include": ["src/**/*.ts", "node_modules/@types"],
+  "include": [
+    "src/**/*.ts",
+    "node_modules/@types",
+    "node_modules/@types/hammerjs/index.d.ts"
+  ],
   "exclude": [".git", "node_modules"]
 }
